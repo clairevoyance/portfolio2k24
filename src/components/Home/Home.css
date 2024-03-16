@@ -1,0 +1,25 @@
+.homeSectionParentContainer {
+    box-shadow: 0 2px 30px rgba(64, 128, 128, 0.8);
+    border-radius: 3rem;
+    padding: 2rem;
+
+    color: aliceblue;
+}
+
+.containerOne {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+}
+
+.aboutText {
+    font-size: 20px;
+    color: rgb(148, 163, 184);
+}
+
+.aboutImage {
+    border-radius: 5rem;
+    background-color: rgb(11, 16, 31);
+
+    justify-self: end;
+}

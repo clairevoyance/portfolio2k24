@@ -1,0 +1,8 @@
+.experienceSectionParentContainer {
+    margin-top: 8rem;
+    box-shadow: 0 2px 30px rgba(64, 128, 128, 0.8);
+    border-radius: 3rem;
+    padding: 2rem;
+
+    color: aliceblue;
+}

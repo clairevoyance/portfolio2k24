@@ -1,0 +1,56 @@
+.parentContainer {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.animatedLogo {
+    animation: logoOpacity 1s ease-in-out forwards;
+    /* Animation definition */
+}
+
+@keyframes logoOpacity {
+    from {
+        opacity: 0;
+        /* Start hidden */
+    }
+
+    to {
+        opacity: 1;
+        /* Animate to full opacity */
+    }
+}
+
+.main-content {
+    box-shadow: 0 2px 30px rgba(64, 128, 128, 0.8);
+    background-color: rgba(29, 39, 57, 0.7);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 28%;
+}
+
+.main-content div:hover {
+    cursor: pointer;
+}
+
+.individualRouteLinkComponent {
+    font-size: 20px;
+    color: aliceblue;
+    padding: 10px 20px;
+}
+
+.individualRouteLinkComponent:hover {
+    background: radial-gradient(circle, rgba(35, 58, 99, 1) 0%, rgba(35, 58, 99, 0) 70%);
+}
+
+.individualRouteLinkSelected {
+    background: radial-gradient(circle, rgba(35, 58, 99, 1) 0%, rgba(35, 58, 99, 0) 70%);
+}
