@@ -57,7 +57,7 @@ const Header: React.FC<HeaderComponentProps> = () => {
                     }} src={Logo} alt="Logo image" />
                 </div>
                 <div className='main-content'>
-                    {/* Map over headerSections and render each section dynamically */}
+                    {/* Map over headerSections and render each section dynamically*/}
                     {headerRoutes.map((headerRoute, index) => (
                         <div
                             key={index} // Add a unique key for each element (recommended)
