@@ -60,7 +60,7 @@ const Header: React.FC<HeaderComponentProps> = () => {
                     {/* Map over headerSections and render each section dynamically*/}
                     {headerRoutes.map((headerRoute, index) => (
                         <div
-                            key={index} // Add a unique key for each element (recommended)
+                            key={index} // Add a unique key for each element(recommended)
                             className={"individualRouteLinkComponent" + ((isRouteSelected && selectedRouteIndex == index) ? " individualRouteLinkSelected" : "")}
                             onClick={() => {
                                 navigateTo(headerRoute.path)
