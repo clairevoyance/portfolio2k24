@@ -2,8 +2,7 @@ import './Header.css'
 import Logo from '../../assets/Logo-Final.png'
 import React from 'react'
 import { HeaderRoute } from './Header.models'
-import { useNavigate } from 'react-router-dom'
-
+import { useNavigate, useLocation } from 'react-router-dom'
 
 interface HeaderComponentProps {
 
@@ -12,13 +11,12 @@ interface HeaderComponentProps {
 const Header: React.FC<HeaderComponentProps> = () => {
 
     const [headerRoutes, setHeaderRoutes] = React.useState<HeaderRoute[]>([]);
-    const [isRouteSelected, setIsRouteSelected] = React.useState<boolean>(true);
     const [selectedRouteIndex, setSelectedRouteIndex] = React.useState<number>(0);
     const navigateTo = useNavigate();
+    const location = useLocation();
 
     React.useEffect(() => {
-
-        // adding all the header routes
+        // Adding all the header routes
         const routes : HeaderRoute[] = [
             {
                 displayName: 'Home',
@@ -44,7 +42,11 @@ const Header: React.FC<HeaderComponentProps> = () => {
 
         setHeaderRoutes(routes);
         
-    }, [])
+        // Determine the selected route index based on the URL pathname
+        const pathname = location.pathname;
+        const index = routes.findIndex(route => route.path === pathname);
+        setSelectedRouteIndex(index !== -1 ? index : 0);
+    }, [location.pathname])
 
     return (
         <>
@@ -61,12 +63,8 @@ const Header: React.FC<HeaderComponentProps> = () => {
                     {headerRoutes.map((headerRoute, index) => (
                         <div
                             key={index} // Add a unique key for each element (recommended)
-                            className={"individualRouteLinkComponent" + ((isRouteSelected && selectedRouteIndex == index) ? " individualRouteLinkSelected" : "")}
-                            onClick={() => {
-                                navigateTo(headerRoute.path)
-                                setIsRouteSelected(true);
-                                setSelectedRouteIndex(index);
-                            }}
+                            className={"individualRouteLinkComponent" + (selectedRouteIndex === index ? " individualRouteLinkSelected" : "")}
+                            onClick={() => navigateTo(headerRoute.path)}
                         >
                             {headerRoute.displayName}
                         </div>
