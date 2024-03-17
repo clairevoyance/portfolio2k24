@@ -16,9 +16,9 @@ function App() {
       }}>
         <Header />
         <div style={{
-          marginTop: '6rem',
-          paddingLeft: '1.5rem',
-          paddingRight: '1.5rem'
+          marginTop: '150px',
+          paddingLeft: '50px',
+          paddingRight: '50px'
         }}>
           <Routes>
             <Route path="/" Component={Home} />

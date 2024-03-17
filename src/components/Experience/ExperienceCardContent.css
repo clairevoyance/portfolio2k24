@@ -1,0 +1,32 @@
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(134, 164, 213);
+}
+
+.card-subtitle {
+    font-size: 20px;
+    color: rgb(148, 163, 184);
+    margin-bottom: 10px;
+}
+
+.detailed-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(148, 163, 184);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tech-stack-item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: rgb(16, 23, 42);
+    color: rgb(148, 163, 184);
+    border-radius: 20px;
+}
